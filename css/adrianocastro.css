@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One&display=swap');
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: 'Noto Sans SC', sans-serif;
+    font-family: 'Chau Philomene One', sans-serif;
 }
 
 .texto-principal {
@@ -119,4 +119,16 @@ body {
         transform: translateY(-800px) rotate(360deg);
         opacity: 0;
     }
+}
+
+.anime {
+    margin-top: 5rem;
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0);
+    transition: .3s;
+}
+
+.anime-start {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
