@@ -9,6 +9,15 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/adrianocastro.css">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js').then(function() {
+                console.log('Service worker registrado com sucesso!')
+            }).catch(function() {
+                console.log('Registro do service worker não realizado!')
+            })
+        }
+    </script>
 </head>
 
 <body>
