@@ -22,6 +22,15 @@ self.addEventListener('install', function(event) {
     )
 })
 
+// Aqui, definimos nosso evento fetch e, em event.respondWith(), passamos uma promessa de caches.match(). Esse método examina a solicitação e encontra todos os resultados armazenados em qualquer um dos caches criados pelo service worker.
 self.addEventListener('fetch', function(event) {
-
+    event.respondWith(
+        caches.match(event.request)
+        .then(function(response) {
+            if (response) {
+                return response
+            }
+            return fetch(event.request)
+        })
+    )
 })
