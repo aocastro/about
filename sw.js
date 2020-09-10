@@ -4,7 +4,6 @@ var urlsToCache = [
     'css/adrianocastro.css',
     'css/bootstrap.css',
     'img/favicon.png',
-    'img/favicon.png',
     'js/bootstrap.js',
     'js/jquery-3.5.1.min.js',
     'js/portifolio.js',
