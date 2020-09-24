@@ -29,7 +29,27 @@ self.addEventListener('fetch', function(event) {
             if (response) {
                 return response
             }
-            return fetch(event.request)
+
+            var fecthRequest = event.request.clone()
+
+            return fetch(fecthRequest).then(
+                function(response) {
+                    if (!response || response.status !== 200 || response.type !== 'basic') {
+                        return response
+                    }
+
+                    var responseToCache = response.clone()
+
+                    caches.open(CACHE_NAME).then(
+                        function(cache) {
+                            cache.put(event.request, responseToCache)
+                        }
+                    )
+
+                    return response
+
+                }
+            )
         })
     )
 })
