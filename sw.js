@@ -4,6 +4,9 @@ var urlsToCache = [
     'css/adrianocastro.css',
     'css/bootstrap.css',
     'img/favicon.png',
+    'img/logo_html5.png',
+    'img/logo_php.png',
+    'img/social-media-marketing.svg',
     'js/bootstrap.js',
     'js/jquery-3.5.1.min.js',
     'js/portifolio.js',
@@ -49,6 +52,22 @@ self.addEventListener('fetch', function(event) {
                     return response
 
                 }
+            )
+        })
+    )
+})
+
+self.addEventListener('active', function(event) {
+    var cacheAllowlist = ['adrianocastro-cache-v1', 'adrianocastro-cache-v2']
+
+    event.waitUntil(
+        caches.keys().then(function(cacheNames) {
+            return Promisse.all(
+                cacheNames.map(function(cacheName) {
+                    if (cacheAllowlist.indexOf(cacheName) === -1) {
+                        return cache.delete(cacheName)
+                    }
+                })
             )
         })
     )
