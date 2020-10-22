@@ -9,10 +9,36 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/adrianocastro.css">
     <link rel="manifest" href="manifest.json">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="adrianoCastro">
+    <meta name="apple-mobile-web-app-title" content="adrianoCastro">
+    <meta name="theme-color" content="#007bff">
+    <meta name="msapplication-navbutton-color" content="#007bff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="./">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" type="image/png" sizes="512X512" href="https://aocastro.github.io/about/img/icon512.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="512X512" href="https://aocastro.github.io/about/img/icon512.png">
+    <link rel="icon" type="image/png" sizes="48X48" href="homescreen.phttps://aocastro.github.io/about/img/icon48.pngng">
+    <link rel="apple-touch-icon" type="image/png" sizes="48X48" href="homescreen.phttps://aocastro.github.io/about/img/icon48.pngng">
+
     <script>
-        import 'pwabuilder-sw.js';
-        const el = document.createElement('pwa-update');
-        document.body.appendChild(el);
+        if ("serviceWorker" in navigator) {
+            if (navigator.serviceWorker.controller) {
+                console.log("[Aplicativo] funcionário de serviço ativo encontrado, não há necessidade de registrar");
+            } else {
+                navigator.serviceWorker
+                    .register("./sw.js", {
+                        scope: "./"
+                    })
+                    .then(function(reg) {
+                        console.log("[Aplicativo] O trabalhador do serviço foi registrado para o escopo: " + reg.scope);
+                    });
+            }
+        }
     </script>
 </head>
 

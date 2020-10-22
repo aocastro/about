@@ -1,18 +1,1 @@
-{
-    "dir": "ltr",
-    "lang": "pt-br",
-    "name": "adrianoCastro   Site Oficial",
-    "short_name": "adrianoCastro",
-    "scope": "/about/",
-    "display": "browser",
-    "start_url": "https://aocastro.github.io/about/",
-    "background_color": "#000000",
-    "theme_color": "transparent",
-    "description": "Site para demonstração do portfólio de trabalho do Adriano Oliveira Castro",
-    "orientation": "any",
-    "related_applications": [],
-    "prefer_related_applications": false,
-    "icons": [],
-    "url": "https://aocastro.github.io/about/",
-    "screenshots": []
-}
+{  "name": "adrianoCastro - Desenvolvimento e Designer",  "short_name": "adrianoCastro",  "lang": "pt-BR",  "start_url": "./",  "scope": "./?",  "display": "fullscreen",  "theme_color": "#007bff",  "icons": [    {      "src": "https://aocastro.github.io/about/img/icon512.png",      "sizes": "512X512",      "type": "image/png"    },    {      "src": "homescreen.phttps://aocastro.github.io/about/img/icon48.pngng",      "sizes": "48X48",      "type": "image/png"    }  ],  "background_color": "#000000"}
