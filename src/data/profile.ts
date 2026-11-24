@@ -1,11 +1,13 @@
+import avatarImg from '../assets/adriano-castro.jpg';
+
 export const PROFILE = {
   name: 'Adriano Oliveira Castro',
   shortName: 'adrianoCastro',
   handle: '@aocastro',
   title: 'Mestre em Ciência da Computação • Professor de T.I. • Arquiteto de Software',
   location: 'Lins / SP, Brasil',
-  email: 'adriano.castro2@etec.sp.gov.br',
-  avatarUrl: 'https://avatars.githubusercontent.com/u/56028189?v=4',
+  email: 'adrianooliveiracastro@gmail.com',
+  avatarUrl: avatarImg,
   bio: 'Mestre em Ciência da Computação pela UNESP (Bauru), Professor de Tecnologia da Informação no Centro Paula Souza e Sócio da A&D Soluções em Tecnologia. Entusiasta de T.I.C., Visualização da Informação e Engenharia de Software.',
   links: {
     lattes: 'http://lattes.cnpq.br/0485865376238115',

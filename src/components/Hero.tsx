@@ -97,9 +97,9 @@ export function Hero({ repoCount }: HeroProps) {
                 <img
                   src={PROFILE.avatarUrl}
                   alt="Foto de perfil de Adriano Oliveira Castro"
-                  width={260}
-                  height={260}
-                  className="h-56 w-56 rounded-2xl object-cover sm:h-64 sm:w-64"
+                  width={256}
+                  height={320}
+                  className="h-72 w-56 rounded-2xl object-cover object-top sm:h-80 sm:w-64"
                 />
                 <div className="mt-2 flex items-center justify-between rounded-xl bg-slate-100 px-3 py-2 text-xs font-mono text-slate-700 dark:bg-slate-800/80 dark:text-slate-300">
                   <span>{PROFILE.handle}</span>
