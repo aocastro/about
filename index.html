@@ -1,76 +1,31 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>adrianoCastro</title>
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/adrianocastro.css">
-    <link rel="manifest" href="manifest.json">
-
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="adrianoCastro">
-    <meta name="apple-mobile-web-app-title" content="adrianoCastro">
-    <meta name="theme-color" content="#007bff">
-    <meta name="msapplication-navbutton-color" content="#007bff">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="msapplication-starturl" content="./">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="icon" type="image/png" sizes="512X512" href="https://aocastro.github.io/about/img/icon512.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="512X512" href="https://aocastro.github.io/about/img/icon512.png">
-    <link rel="icon" type="image/png" sizes="48X48" href="homescreen.phttps://aocastro.github.io/about/img/icon48.pngng">
-    <link rel="apple-touch-icon" type="image/png" sizes="48X48" href="homescreen.phttps://aocastro.github.io/about/img/icon48.pngng">
-
-    <script>
-        if ("serviceWorker" in navigator) {
-            if (navigator.serviceWorker.controller) {
-                console.log("[Aplicativo] funcionário de serviço ativo encontrado, não há necessidade de registrar");
-            } else {
-                navigator.serviceWorker
-                    .register("./sw.js", {
-                        scope: "./"
-                    })
-                    .then(function(reg) {
-                        console.log("[Aplicativo] O trabalhador do serviço foi registrado para o escopo: " + reg.scope);
-                    });
-            }
-        }
-    </script>
-</head>
-
-<body>
-
-
-    <div class="texto-principal">
-
-        <ul>
-            <li>Home</li>
-            <li>Que sou?</li>
-            <li><a href="portfolio.html">Portifólio</a></li>
-            <li>Contato</li>
-        </ul>
-
-        <h2>adrianoCastro</h2>
-
-    </div>
-
-    <div class="area-animacao">
-        <div class="area">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </div>
-
-    </div>
-
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-</body>
-
+<!doctype html>
+<html lang="pt-BR" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adriano Oliveira Castro | Mestre em Ciência da Computação, Professor e Desenvolvedor</title>
+    <meta
+      name="description"
+      content="Portfólio profissional e acadêmico de Adriano Oliveira Castro — Mestre em Ciência da Computação (UNESP), Professor de T.I. no Centro Paula Souza, Arquiteto de Software e Sócio na A&D Soluções em Tecnologia."
+    />
+    <meta name="author" content="Adriano Oliveira Castro" />
+    <meta property="og:title" content="Adriano Oliveira Castro | Portfólio Profissional" />
+    <meta
+      property="og:description"
+      content="Pesquisa em Visualização da Informação, Docência em Desenvolvimento de Sistemas, Projetos Web e Repositórios Open Source."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aocastro.github.io/about/" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-[#0B0F17] dark:text-slate-50 antialiased selection:bg-emerald-500/30 selection:text-emerald-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
